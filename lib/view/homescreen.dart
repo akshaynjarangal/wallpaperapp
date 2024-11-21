@@ -6,7 +6,7 @@ import 'package:wallpaperapp/view/widgets/categoryphoto.dart';
 import 'package:wallpaperapp/view/widgets/searchbar.dart';
 
 class Homescreen extends StatefulWidget {
-  const Homescreen({Key? key}) : super(key: key);
+  const Homescreen({super.key});
 
   @override
   State<Homescreen> createState() => _HomescreenState();
@@ -39,11 +39,11 @@ class _HomescreenState extends State<Homescreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Wallpaper app"),
+        title: const Text("Wallpaper app"),
       ),
       backgroundColor: const Color.fromARGB(255, 0, 0, 0),
       body: isLoading
-          ? Center(
+          ? const Center(
               child: CircularProgressIndicator(), // Show loading indicator
             )
           : SingleChildScrollView(
@@ -61,7 +61,7 @@ class _HomescreenState extends State<Homescreen> {
                         // Search bar
                         Container(
                           padding: const EdgeInsets.symmetric(horizontal: 16),
-                          child: SearchBarWid(),
+                          child: const SearchBarWid(),
                         ),
 
                         // Category
@@ -87,8 +87,8 @@ class _HomescreenState extends State<Homescreen> {
 
                   // Grid view
                   Container(
-                    decoration: BoxDecoration(
-                        color: const Color.fromARGB(255, 255, 255, 255),
+                    decoration: const BoxDecoration(
+                        color: Color.fromARGB(255, 255, 255, 255),
                         borderRadius: BorderRadius.only(
                           topLeft: Radius.circular(30),
                           topRight: Radius.circular(30),

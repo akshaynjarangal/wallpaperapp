@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:wallpaperapp/view/category.dart';
 import 'package:wallpaperapp/view/homescreen.dart';
 
 void main() {
@@ -20,7 +19,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: Homescreen(),
+      home: const Homescreen(),
       // home: CategoryScreen(),
     );
   }

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class Customappbar extends StatefulWidget {
-  const Customappbar({ Key? key }) : super(key: key);
+  const Customappbar({ super.key });
 
   @override
   _CustomappbarState createState() => _CustomappbarState();

@@ -7,7 +7,7 @@ import 'package:wallpaperapp/view/widgets/searchbar.dart';
 
 class SearchScreen extends StatefulWidget {
   final String qury;
-  SearchScreen({Key? key, required this.qury}) : super(key: key);
+  const SearchScreen({super.key, required this.qury});
 
   @override
   State<SearchScreen> createState() => _SearchScreenState();
@@ -38,7 +38,7 @@ class _SearchScreenState extends State<SearchScreen> {
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 0, 0, 0),
       body: isLoading
-          ? Center(
+          ? const Center(
               child: CircularProgressIndicator(), // Show loading indicator
             )
           : SingleChildScrollView(
@@ -56,7 +56,7 @@ class _SearchScreenState extends State<SearchScreen> {
                         // Search bar
                         Container(
                           padding: const EdgeInsets.symmetric(horizontal: 16),
-                          child: SearchBarWid(),
+                          child: const SearchBarWid(),
                         ),
                         // Category
                         Container(
@@ -68,7 +68,7 @@ class _SearchScreenState extends State<SearchScreen> {
                               scrollDirection: Axis.horizontal,
                               itemCount: 30,
                               itemBuilder: (context, item) {
-                                return Categoryphoto(
+                                return const Categoryphoto(
                                   imgSrc: '',
                                 );
                               },
@@ -80,8 +80,8 @@ class _SearchScreenState extends State<SearchScreen> {
                   ),
                   // GridView
                   Container(
-                    decoration: BoxDecoration(
-                        color: const Color.fromARGB(255, 224, 224, 223),
+                    decoration: const BoxDecoration(
+                        color: Color.fromARGB(255, 224, 224, 223),
                         borderRadius: BorderRadius.only(
                             topLeft: Radius.circular(30),
                             topRight: Radius.circular(30))),

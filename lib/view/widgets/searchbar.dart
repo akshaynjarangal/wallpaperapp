@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:wallpaperapp/controller/apiOp.dart';
-import 'package:wallpaperapp/model/photomodel.dart';
 import 'package:wallpaperapp/view/searchscreen.dart';
 
 class SearchBarWid extends StatefulWidget {
-  SearchBarWid({Key? key,}) : super(key: key);
+  const SearchBarWid({super.key,});
 
   @override
   State<SearchBarWid> createState() => _SearchBarWidState();
@@ -12,16 +10,12 @@ class SearchBarWid extends StatefulWidget {
 
 class _SearchBarWidState extends State<SearchBarWid> {
   TextEditingController searchquerycontroller = TextEditingController();
-  @override
-  void initState() {
-    // TODO: implement initState
-    super.initState();
-  }
+
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 18),
+      padding: const EdgeInsets.symmetric(horizontal: 18),
       decoration: BoxDecoration(
         color: const Color.fromARGB(176, 189, 188, 188),
         border: Border.all(color: const Color.fromARGB(255, 250, 247, 247)),
@@ -32,7 +26,7 @@ class _SearchBarWidState extends State<SearchBarWid> {
           Expanded(
             child: TextField(
               controller: searchquerycontroller,
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 hintText: "Search Wallpaper",
                 errorBorder: InputBorder.none,
                 focusedBorder: InputBorder.none,
@@ -50,7 +44,7 @@ class _SearchBarWidState extends State<SearchBarWid> {
                 return SearchScreen(qury: searchquerycontroller.text);
               }));
             },
-            child: Icon(Icons.search),
+            child: const Icon(Icons.search),
           )
         ],
       ),

@@ -1,15 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:wallpaperapp/view/widgets/categoryphoto.dart';
-import 'package:wallpaperapp/view/widgets/searchbar.dart';
 
-class CategoryScreen extends StatefulWidget {
-  const CategoryScreen({Key? key}) : super(key: key);
+class CategoryScreen extends StatelessWidget {
+  const CategoryScreen({super.key});
 
-  @override
-  State<CategoryScreen> createState() => _CategoryScreenState();
-}
-
-class _CategoryScreenState extends State<CategoryScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,11 +13,11 @@ class _CategoryScreenState extends State<CategoryScreen> {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 Container(
-                  margin: EdgeInsets.symmetric(horizontal: 10),
+                  margin: const EdgeInsets.symmetric(horizontal: 10),
                   child: Stack(
                     children: [
                       Image.network(
@@ -36,11 +29,11 @@ class _CategoryScreenState extends State<CategoryScreen> {
                       Container(
                         height: 150,
                         width: MediaQuery.of(context).size.width,
-                        decoration: BoxDecoration(
-                          color: const Color.fromARGB(106, 0, 0, 0),
+                        decoration: const BoxDecoration(
+                          color: Color.fromARGB(106, 0, 0, 0),
                         ),
                       ),
-                      Positioned(
+                      const Positioned(
                         left: 150,
                         top: 40,
                         child: Column(
@@ -68,16 +61,16 @@ class _CategoryScreenState extends State<CategoryScreen> {
                   ),
                 ),
                 //gridview
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 Container(
-                  margin: EdgeInsets.symmetric(horizontal: 10),
+                  margin: const EdgeInsets.symmetric(horizontal: 10),
                   height: MediaQuery.of(context).size.height,
                   child: GridView.builder(
                     // shrinkWrap: false,
-                    physics: BouncingScrollPhysics(),
-                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    physics: const BouncingScrollPhysics(),
+                    gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                       mainAxisExtent: 400,
                       crossAxisCount: 2,
                       crossAxisSpacing: 13,

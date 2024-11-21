@@ -14,9 +14,9 @@ class Apiop {
       Map<String, dynamic> jsonData = jsonDecode(value.body);
       List photos = jsonData["photos"];
 
-      photos.forEach((element) {
+      for (var element in photos) {
         trendingWallpaper.add(PhotoModel.fromApi2App(element));
-      });
+      }
     });
     return trendingWallpaper;
   }
@@ -33,9 +33,9 @@ class Apiop {
       Map<String, dynamic> jsonData = jsonDecode(value.body);
       List photos = jsonData["photos"];
       searchwallpaper.clear();
-      photos.forEach((element) {
+      for (var element in photos) {
         searchwallpaper.add(PhotoModel.fromApi2App(element));
-      });
+      }
     });
     return searchwallpaper;
   }
